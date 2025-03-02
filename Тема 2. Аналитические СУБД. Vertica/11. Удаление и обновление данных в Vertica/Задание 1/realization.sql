@@ -9,4 +9,4 @@ create table dialogs
 )
 order by message_from, message_ts
 SEGMENTED BY hash(message_id) all nodes
-PARTITION BY TRUNC(message_ts , 'YY') /*здесь нужно указать поле*/s
+PARTITION BY TRUNC(message_ts , 'YY'); /*здесь нужно указать поле*/
