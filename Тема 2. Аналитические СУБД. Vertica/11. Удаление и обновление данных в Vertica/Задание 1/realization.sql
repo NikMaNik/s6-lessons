@@ -1,3 +1,5 @@
+drop table if exists dialogs;
+
 create table dialogs
 (
     message_id   int PRIMARY KEY,
@@ -9,5 +11,4 @@ create table dialogs
 )
 order by message_from, message_ts
 SEGMENTED BY hash(message_id) all nodes
-PARTITION BY TRUNC(message_ts , 'YY') /*здесь нужно указать поле*/
-;
+PARTITION BY TRUNC(message_ts , 'YY') /*здесь нужно указать поле*/s
