@@ -1,3 +1,4 @@
+drop table if exists dialogs;
 create table dialogs
 (
     message_id   int PRIMARY KEY,
