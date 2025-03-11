@@ -21,9 +21,9 @@ UNION ALL
 SELECT 
     min(message_ts) as datestamp,
     'earliest dialog message' as info
-FROM STV2025021816__STAGING.message 
+FROM STV2025021816__STAGING.dialogs 
 UNION ALL
 SELECT
     max(message_ts) as datestamp,
     'latest dialog message' as info
-FROM STV2025021816__STAGING.message
+FROM STV2025021816__STAGING.dialogs
