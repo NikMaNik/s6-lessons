@@ -4,7 +4,7 @@ SELECT
 FROM STV2025021816__STAGING.users as u
 UNION ALL
 SELECT
-    max(u.registration_dt) as datestamp,,
+    max(u.registration_dt) as datestamp,
     'latest user registration' as info
 FROM STV2025021816__STAGING.users u
 UNION ALL
